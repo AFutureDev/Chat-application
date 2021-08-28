@@ -1,10 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
+import ChatRoomItem from '../../components/ChatRoomItem';
+import styles from './styles';
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.page}>
+      <ChatRoomItem />
     </View>
   );
 };
