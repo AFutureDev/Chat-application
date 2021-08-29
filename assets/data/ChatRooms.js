@@ -63,7 +63,7 @@ export default [
     lastMessage: {
       id: 'm3',
       content: 'Is This messager better then Viber ?',
-      createdAt: '2020-10-02T14:48:00.000Z',
+      createdAt: '2020-10-02T 15:40:00',
     },
   },
   {
@@ -85,7 +85,7 @@ export default [
     lastMessage: {
       id: 'm4',
       content: 'New Project',
-      createdAt: '2020-09-29T14:48:00.000Z',
+      createdAt: '2020-10-02T 15:40:00',
     },
   },
   {
@@ -107,7 +107,7 @@ export default [
     lastMessage: {
       id: 'm5',
       content: 'I would be happy',
-      createdAt: '2020-09-30T14:48:00.000Z',
+      createdAt: '2020-10-02T 15:40:00',
     },
   },
   {
@@ -129,7 +129,7 @@ export default [
     lastMessage: {
       id: 'm6',
       content: 'Anton ?',
-      createdAt: '2020-10-02T15:40:00.000Z',
+      createdAt: '2020-10-02T 15:40:00',
     },
   },
   {
@@ -151,7 +151,7 @@ export default [
     lastMessage: {
       id: 'm7',
       content: 'How are you doing?',
-      createdAt: '2020-10-02T15:40:00.000Z',
+      createdAt: '2020-10-02T 15:40:00',
     },
   },
   {
@@ -173,7 +173,7 @@ export default [
     lastMessage: {
       id: 'm8',
       content: 'Fanta',
-      createdAt: '2020-09-27T15:40:00.000Z',
+      createdAt: '2020-10-02T 15:40:00',
     },
   },
   {
@@ -195,7 +195,51 @@ export default [
     lastMessage: {
       id: 'm9',
       content: 'The same place',
-      createdAt: '2020-09-25T15:40:00.000Z',
+      createdAt: '2020-10-02T 15:40:00',
+    },
+  },
+  {
+    id: '10',
+    users: [
+      {
+        id: 'u1',
+        name: 'Raf',
+        imageUri:
+          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
+      },
+      {
+        id: 'u10',
+        name: 'Kim',
+        imageUri:
+          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
+      },
+    ],
+    lastMessage: {
+      id: 'm9',
+      content: 'The same place',
+      createdAt: '2020-10-02T 15:40:00',
+    },
+  },
+  {
+    id: '11',
+    users: [
+      {
+        id: 'u1',
+        name: 'Raf',
+        imageUri:
+          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
+      },
+      {
+        id: 'u10',
+        name: 'Kim',
+        imageUri:
+          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
+      },
+    ],
+    lastMessage: {
+      id: 'm9',
+      content: 'The same place',
+      createdAt: '2020-10-02T 15:40:00',
     },
   },
 ];
