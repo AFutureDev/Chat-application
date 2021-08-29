@@ -2,25 +2,33 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 import styles from './styles';
 
-const ChatRoomItem = () => {
+const ChatRoomItem = ({chatRoom}) => {
+  //const chatRoom = props.chatRoom;
+  const user = chatRoom.users[1];
+
   return (
     <View style={styles.container}>
       <Image
         source={{
-          uri: 'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
+          uri: user.imageUri,
         }}
         style={styles.image}
       />
-      <View style={styles.badgeContainer}>
-        <Text style={styles.badgeText}>4</Text>
-      </View>
+
+      {/* if there is new message show messageBadge if not hen show null */}
+      {chatRoom.newMessages ? (
+        <View style={styles.badgeContainer}>
+          <Text style={styles.badgeText}>{chatRoom.newMessages}</Text>
+        </View>
+      ) : null}
+
       <View style={styles.rightContainer}>
         <View style={styles.row}>
-          <Text style={styles.name}>Raf</Text>
-          <Text style={styles.text}>12:13AM</Text>
+          <Text style={styles.name}>{user.name}</Text>
+          <Text style={styles.text}>{chatRoom.lastMessage.createdAt}</Text>
         </View>
         <Text numberOfLines={1} style={styles.text}>
-          Hello, how are you ?
+          {chatRoom.lastMessage.content}
         </Text>
       </View>
     </View>
