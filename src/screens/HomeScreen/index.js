@@ -13,6 +13,7 @@ const HomeScreen = () => {
       <FlatList
         data={ChatRoomData}
         renderItem={({item}) => <ChatRoomItem chatRoom={item} />}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );

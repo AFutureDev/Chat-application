@@ -198,48 +198,4 @@ export default [
       createdAt: '2020-10-02T 15:40:00',
     },
   },
-  {
-    id: '10',
-    users: [
-      {
-        id: 'u1',
-        name: 'Raf',
-        imageUri:
-          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
-      },
-      {
-        id: 'u10',
-        name: 'Kim',
-        imageUri:
-          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
-      },
-    ],
-    lastMessage: {
-      id: 'm9',
-      content: 'The same place',
-      createdAt: '2020-10-02T 15:40:00',
-    },
-  },
-  {
-    id: '11',
-    users: [
-      {
-        id: 'u1',
-        name: 'Raf',
-        imageUri:
-          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
-      },
-      {
-        id: 'u10',
-        name: 'Kim',
-        imageUri:
-          'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
-      },
-    ],
-    lastMessage: {
-      id: 'm9',
-      content: 'The same place',
-      createdAt: '2020-10-02T 15:40:00',
-    },
-  },
 ];
