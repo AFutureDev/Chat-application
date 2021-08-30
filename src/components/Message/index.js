@@ -7,7 +7,7 @@ const grey = 'lightgrey';
 
 const myID = 'u1';
 
-const index = ({message}) => {
+const Message = ({message}) => {
   const isMe = message.user.id === myID;
 
   return (
@@ -21,4 +21,4 @@ const index = ({message}) => {
   );
 };
 
-export default index;
+export default Message;
