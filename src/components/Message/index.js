@@ -14,10 +14,7 @@ const index = ({message}) => {
     <View
       style={[
         styles.container,
-        {
-          backgroundColor: isMe ? grey : blue,
-          marginLeft: isMe ? 'auto' : 10,
-        },
+        isMe ? styles.rightContainer : styles.leftContainer,
       ]}>
       <Text style={{color: isMe ? '#000' : '#fff'}}>{message.content}</Text>
     </View>
