@@ -71,7 +71,7 @@ export default {
     },
     {
       id: 'm7',
-      content: 'btw, SpaceX is interested in buying notJust.dev!',
+      content: 'btw, SpaceX is interested in your Project',
       createdAt: '2020-10-03 14:53:00',
       user: {
         id: 'u2',

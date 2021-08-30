@@ -20,7 +20,11 @@ const Navigation = () => {
           component={HomeScreen}
           options={{headerTitle: HomeHeader}}
         />
-        <Stack.Screen name="ChatRoom" component={ChatRoomScreen} />
+        <Stack.Screen
+          name="ChatRoom"
+          component={ChatRoomScreen}
+          options={{headerTitle: ChatRoomHeader}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -53,6 +57,32 @@ const HomeHeader = props => {
         color="black"
         style={{marginHorizontal: 30}}
       />
+    </View>
+  );
+};
+
+const ChatRoomHeader = props => {
+  const {width} = useWindowDimensions();
+
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
+      <Image
+        source={{
+          uri: 'https://resumator.s3.amazonaws.com/customer_20190618152639_F47TZW85FFKEI1NX/social_icons/20200714100635_600x600.jpg',
+        }}
+        style={{width: 35, height: 35, borderRadius: 30, marginRight: 5}}
+      />
+      <Text
+        style={{
+          fontWeight: 'bold',
+        }}>
+        {props.children}
+      </Text>
     </View>
   );
 };

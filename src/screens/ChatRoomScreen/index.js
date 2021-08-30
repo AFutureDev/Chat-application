@@ -4,12 +4,15 @@ import Message from '../../components/Message/index';
 import chatRoomData from '../../../assets/data/Chats';
 import styles from './styles';
 import MessageInput from '../../components/MessageInput';
-import {useRoute} from '@react-navigation/core';
+import {useRoute, useNavigation} from '@react-navigation/core';
 
 const ChatRoomScreen = () => {
   const route = useRoute();
+  const navigation = useNavigation();
 
-  console.warn('Displaying chat room: ', route.params?.id);
+  //console.warn('Displaying chat room: ', route.params?.id);
+
+  navigation.setOptions({title: 'Kilo'});
 
   return (
     <SafeAreaView style={styles.page}>
