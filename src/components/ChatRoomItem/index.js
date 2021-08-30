@@ -10,7 +10,8 @@ const ChatRoomItem = ({chatRoom}) => {
   const navigation = useNavigation();
 
   const onPress = () => {
-    navigation.navigate('ChatRoom');
+    console.warn('pressed on', user.name);
+    navigation.navigate('ChatRoom', {id: chatRoom.id});
   };
 
   return (
