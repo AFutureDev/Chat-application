@@ -18,7 +18,7 @@ export default [
     lastMessage: {
       id: 'm1',
       content: 'Hello, how are you ?',
-      createdAt: '2020-10-03T 14:48:00',
+      createdAt: '14:48:00',
     },
     newMessages: 4,
   },
@@ -41,7 +41,7 @@ export default [
     lastMessage: {
       id: 'm2',
       content: 'Hey, ',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
   {
@@ -63,7 +63,7 @@ export default [
     lastMessage: {
       id: 'm3',
       content: 'Is This messager better then Viber ?',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
   {
@@ -85,7 +85,7 @@ export default [
     lastMessage: {
       id: 'm4',
       content: 'New Project',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
   {
@@ -107,7 +107,7 @@ export default [
     lastMessage: {
       id: 'm5',
       content: 'I would be happy',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
   {
@@ -129,7 +129,7 @@ export default [
     lastMessage: {
       id: 'm6',
       content: 'Anton ?',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
   {
@@ -151,7 +151,7 @@ export default [
     lastMessage: {
       id: 'm7',
       content: 'How are you doing?',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
   {
@@ -173,7 +173,7 @@ export default [
     lastMessage: {
       id: 'm8',
       content: 'Fanta',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
   {
@@ -195,7 +195,7 @@ export default [
     lastMessage: {
       id: 'm9',
       content: 'The same place',
-      createdAt: '2020-10-02T 15:40:00',
+      createdAt: '15:40:00',
     },
   },
 ];
