@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -20,19 +20,20 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 150,
+    height: 150,
+    borderRadius: 75,
     overflow: 'hidden',
+    marginTop: 50,
   },
   add: {
-    backgroundColor: '#41444B',
+    backgroundColor: '#3777f0',
     position: 'absolute',
-    bottom: 0,
-    right: 0,
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    bottom: 5,
+    right: 15,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -40,7 +41,25 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     alignItems: 'center',
     marginTop: 16,
-    
+  },
+  btn: {
+    alignSelf: 'center',
+    backgroundColor: '#3777f0',
+    width: Dimensions.get('window').width / 2,
+    justifyContent: 'center',
+    padding: 15,
+    borderRadius: 20,
+    marginTop: 50,
+  },
+  btnText: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#fff',
+  },
+  inputContainer: {
+    flex: 1,
+    margin: 10,
+    marginTop: 90,
   },
 });
 
