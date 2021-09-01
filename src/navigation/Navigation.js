@@ -14,11 +14,18 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
+        <Stack.Screen
+          name="LoginScreen"
+          component={LoginScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{headerTitle: HomeHeader}}
+          options={{
+            headerTitle: HomeHeader,
+            headerLeft: false,
+          }}
         />
         <Stack.Screen
           name="ChatRoom"
