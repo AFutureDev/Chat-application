@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   TextInput,
   Pressable,
+  ActivityIndicator,
 } from 'react-native';
 import Message from '../../components/Message/index';
 import chatRoomData from '../../../assets/data/Chats';
@@ -60,6 +61,10 @@ const ChatRoomScreen = () => {
     };
     setMessages([msgObj, ...messages]);
   };
+
+  if (!messages) {
+    return <ActivityIndicator />;
+  }
 
   return (
     <SafeAreaView style={styles.page}>

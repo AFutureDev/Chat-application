@@ -21,24 +21,18 @@ const LoginScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+    <View style={styles.container} showsVerticalScrollIndicator={false}>
       <ImageBackground
-        source={require('../../../assets/images/login.jpg')}
+        source={require('../../../assets/images/bg.png')}
         style={styles.img}>
-        <View style={styles.textContainer}>
+        {/* <View style={styles.textContainer}>
           <Text style={styles.text}>Chat App</Text>
-        </View>
+        </View> */}
       </ImageBackground>
       {/* Bottom View */}
       <View style={styles.bottomView}>
         <View style={{padding: 40}}>
-          <Text style={{color: '#4632A1', fontSize: 34}}>Welcome</Text>
-          <Text>
-            Don't have an account ?{' '}
-            <Text style={{color: 'red', fontStyle: 'italic'}}>
-              Register now
-            </Text>
-          </Text>
+          <Text style={{color: '#3777f0', fontSize: 34}}>Welcome</Text>
           {/* Form Inputs View */}
           <View style={{marginTop: 50}}>
             <TextInput
@@ -66,9 +60,22 @@ const LoginScreen = () => {
               <Text style={styles.btnText}>Login</Text>
             </Pressable>
           </View>
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: 70,
+            }}>
+            <Text>
+              Don't have an account ?{' '}
+              <Text style={{color: '#3777f0', fontStyle: 'italic'}}>
+                Register now
+              </Text>
+            </Text>
+          </View>
         </View>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
@@ -95,8 +102,8 @@ const styles = StyleSheet.create({
     flex: 1.5,
     backgroundColor: '#fff',
     bottom: 50,
-    borderTopStartRadius: 60,
-    borderTopEndRadius: 60,
+    borderTopStartRadius: 30,
+    borderTopEndRadius: 30,
   },
   button: {
     height: 100,
