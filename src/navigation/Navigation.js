@@ -1,10 +1,11 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import ChatRoomScreen from '../screens/ChatRoomScreen';
-import {Image, Text, View, StyleSheet} from 'react-native';
+import ProfileScreen from '../screens/ProfileScreen';
+import {Image, Text, View, StyleSheet, Pressable} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import useWindowDimensions from 'react-native/Libraries/Utilities/useWindowDimensions';
 
@@ -32,6 +33,7 @@ const Navigation = () => {
           component={ChatRoomScreen}
           options={{headerTitle: ChatRoomHeader}}
         />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -39,6 +41,7 @@ const Navigation = () => {
 
 const HomeHeader = props => {
   const {width} = useWindowDimensions();
+  const navigation = useNavigation();
 
   return (
     <View
@@ -49,19 +52,22 @@ const HomeHeader = props => {
         padding: 10,
         alignItems: 'center',
       }}>
-      <Image
-        source={{
-          uri: 'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
-        }}
-        style={{width: 35, height: 35, borderRadius: 30}}
-      />
+      <Pressable onPress={() => navigation.navigate('Profile')}>
+        <Image
+          source={{
+            uri: 'https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-7-avatar-2754582_120519.png',
+          }}
+          style={{width: 35, height: 35, borderRadius: 30}}
+        />
+      </Pressable>
+
       <Text style={{flex: 1, textAlign: 'center', fontWeight: 'bold'}}>
         Chat Application
       </Text>
       <Feather
-        name="edit-2"
+        name="edit"
         size={24}
-        color="black"
+        color="#3777f0"
         style={{marginHorizontal: 30}}
       />
     </View>
