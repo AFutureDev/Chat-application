@@ -21,12 +21,6 @@ const MessageInput = props => {
   return (
     <View style={styles.root}>
       <View style={styles.inputContainer}>
-        <SimpleLineIcons
-          name="emotsmile"
-          size={24}
-          color="#595959"
-          style={styles.icon}
-        />
         <TextInput
           style={styles.input}
           placeholder="Message..."

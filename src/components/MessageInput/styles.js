@@ -19,9 +19,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 5,
   },
-  icon: {
-    marginHorizontal: 5,
-  },
   buttonContainer: {
     width: 50,
     height: 50,

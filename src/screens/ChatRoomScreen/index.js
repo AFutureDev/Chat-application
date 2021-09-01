@@ -1,13 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  SafeAreaView,
-  TextInput,
-  Pressable,
-  ActivityIndicator,
-} from 'react-native';
+import {FlatList, SafeAreaView, ActivityIndicator} from 'react-native';
 import Message from '../../components/Message/index';
 import chatRoomData from '../../../assets/data/Chats';
 import styles from './styles';
@@ -23,10 +15,10 @@ const ChatRoomScreen = () => {
 
   //console.warn('Displaying chat room: ', route.params?.id);
 
-  //navigation.setOptions({title: 'Kilo'});
+  //navigation.setOptions({id: 1, title: 'Kilo'});
 
   const [messages, setMessages] = useState([]);
-  const [content, setContent] = useState('');
+  //const [content, setContent] = useState('');
 
   useEffect(() => {
     fetchListOfMessages();
@@ -71,7 +63,7 @@ const ChatRoomScreen = () => {
       <FlatList
         data={messages}
         keyExtractor={(item, index) => index.toString()}
-        renderItem={({item, index}) => <Message message={item} key={index} />}
+        renderItem={({item, index}) => <Message message={item} />}
         inverted
       />
       <MessageInput getMsgFromInput={sendMessageToServer} />
