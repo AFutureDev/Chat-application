@@ -22,11 +22,17 @@ const index = () => {
 
   const save = () => {
     //console.warn('pr');
-    setChangeName(name);
-    setChangeEmail(email);
+    if (!name) {
+      console.warn('Please enter a name');
+    } else if (!email) {
+      console.warn('Please enter a email');
+    } else {
+      setChangeName(name);
+      setChangeEmail(email);
 
-    setName('');
-    setEmail('');
+      setName('');
+      setEmail('');
+    }
   };
 
   return (
@@ -74,6 +80,7 @@ const index = () => {
               style={{color: 'black'}}
               value={email}
               onChangeText={setEmail}
+              keyboardType="email-address"
               underlineColorAndroid="#AEB5BC"
             />
           </View>

@@ -20,6 +20,13 @@ const LoginScreen = () => {
 
   const navigation = useNavigation();
 
+  const loginEvent = () => {
+    setEmail('');
+    setPassword('');
+
+    navigation.navigate('Home');
+  };
+
   return (
     <View style={styles.container} showsVerticalScrollIndicator={false}>
       <ImageBackground
@@ -54,9 +61,7 @@ const LoginScreen = () => {
           </View>
           {/* Button  */}
           <View style={styles.button}>
-            <Pressable
-              style={styles.loginBtn}
-              onPress={() => navigation.navigate('Home')}>
+            <Pressable style={styles.loginBtn} onPress={loginEvent}>
               <Text style={styles.btnText}>Login</Text>
             </Pressable>
           </View>
