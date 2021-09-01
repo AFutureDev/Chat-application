@@ -24,16 +24,14 @@ const index = () => {
     //console.warn('pr');
     setChangeName(name);
     setChangeEmail(email);
+
+    setName('');
+    setEmail('');
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* <View style={styles.titleBar}>
-          <Ionicons name="arrow-back" size={24} color="#52575D" />
-          <Feather name="more-vertical" size={24} color="#52575D" />
-        </View> */}
-
         <View style={{alignSelf: 'center'}}>
           <View style={styles.profileImage}>
             <Image
