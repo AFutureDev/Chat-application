@@ -4,12 +4,17 @@ import styles from './styles';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Feather from 'react-native-vector-icons/Feather';
 
-const MessageInput = () => {
+const myID = 'u1';
+
+const MessageInput = props => {
   const [message, setMessage] = useState('');
 
   const sendMessage = () => {
-    console.warn('sending', message);
-
+    const newMsg = {
+      message,
+    };
+    props.getMsgFromInput(newMsg);
+    // props.create(newMsg);
     setMessage('');
   };
 

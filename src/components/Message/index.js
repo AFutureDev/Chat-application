@@ -7,7 +7,7 @@ const grey = 'lightgrey';
 
 const myID = 'u1';
 
-const Message = ({message}) => {
+const Message = ({message, key}) => {
   const isMe = message.user.id === myID;
 
   return (

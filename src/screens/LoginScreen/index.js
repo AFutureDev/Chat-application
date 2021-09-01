@@ -1,12 +1,19 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 
-const index = () => {
+const LoginScreen = () => {
   return (
-    <View>
+    <ScrollView style={styles.container}>
       <Text></Text>
-    </View>
+    </ScrollView>
   );
 };
 
-export default index;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
+
+export default LoginScreen;
