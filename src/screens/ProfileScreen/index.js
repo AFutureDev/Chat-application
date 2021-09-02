@@ -65,19 +65,21 @@ const index = () => {
           </Text>
         </View>
         <View style={styles.inputContainer}>
-          <View style={{margin: 10}}>
-            <Text style={{color: '#AEB5BC'}}>FullName</Text>
+          <View style={{marginTop: 10}}>
+            <Text style={{color: '#AEB5BC', marginHorizontal: 5}}>
+              FullName
+            </Text>
             <TextInput
-              style={{color: 'black'}}
+              style={{color: '#52575D'}}
               value={name}
               onChangeText={setName}
               underlineColorAndroid="#AEB5BC"
             />
           </View>
-          <View style={{margin: 10}}>
+          <View style={{marginTop: 10, marginHorizontal: 5}}>
             <Text style={{color: '#AEB5BC'}}>Email</Text>
             <TextInput
-              style={{color: 'black'}}
+              style={{color: '#52575D'}}
               value={email}
               onChangeText={setEmail}
               keyboardType="email-address"

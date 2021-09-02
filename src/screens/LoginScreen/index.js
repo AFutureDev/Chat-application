@@ -10,6 +10,7 @@ import {
   CheckBox,
   Button,
   Pressable,
+  SafeAreaView,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 
@@ -21,66 +22,77 @@ const LoginScreen = () => {
   const navigation = useNavigation();
 
   const loginEvent = () => {
-    setEmail('');
-    setPassword('');
+    if (!email) {
+      console.warn('Please enter a name');
+    } else if (!password) {
+      console.warn('Please enter a email');
+    } else {
+      setEmail(email);
+      setPassword(password);
 
-    navigation.navigate('Home');
+      setEmail('');
+      setPassword('');
+
+      navigation.navigate('Home');
+    }
   };
 
   return (
-    <View style={styles.container} showsVerticalScrollIndicator={false}>
-      <ImageBackground
-        source={require('../../../assets/images/bg.png')}
-        style={styles.img}>
-        {/* <View style={styles.textContainer}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <ImageBackground
+          source={require('../../../assets/images/bg.png')}
+          style={styles.img}>
+          {/* <View style={styles.textContainer}>
           <Text style={styles.text}>Chat App</Text>
         </View> */}
-      </ImageBackground>
-      {/* Bottom View */}
-      <View style={styles.bottomView}>
-        <View style={{padding: 40}}>
-          <Text style={{color: '#3777f0', fontSize: 34}}>Welcome</Text>
-          {/* Form Inputs View */}
-          <View style={{marginTop: 50}}>
-            <TextInput
-              style={{marginTop: 20}}
-              placeholder="Email"
-              value={email}
-              onChangeText={setEmail}
-              underlineColorAndroid={'#AEAEAE'}
-              keyboardType="email-address"
-            />
-            <TextInput
-              style={{marginTop: 20}}
-              placeholder="Password"
-              value={password}
-              onChangeText={setPassword}
-              underlineColorAndroid={'#AEAEAE'}
-              secureTextEntry={true}
-            />
-          </View>
-          {/* Button  */}
-          <View style={styles.button}>
-            <Pressable style={styles.loginBtn} onPress={loginEvent}>
-              <Text style={styles.btnText}>Login</Text>
-            </Pressable>
-          </View>
-          <View
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: 70,
-            }}>
-            <Text>
-              Don't have an account ?{' '}
-              <Text style={{color: '#3777f0', fontStyle: 'italic'}}>
-                Register now
+        </ImageBackground>
+        {/* Bottom View */}
+        <View style={styles.bottomView}>
+          <View style={{padding: 40}}>
+            <Text style={{color: '#3777f0', fontSize: 34}}>Welcome</Text>
+            {/* Form Inputs View */}
+            <View style={{marginTop: 50}}>
+              <TextInput
+                style={{marginTop: 20}}
+                placeholder="Email"
+                value={email}
+                onChangeText={setEmail}
+                underlineColorAndroid={'#AEAEAE'}
+                keyboardType="email-address"
+              />
+              <TextInput
+                style={{marginTop: 20}}
+                placeholder="Password"
+                value={password}
+                onChangeText={setPassword}
+                underlineColorAndroid={'#AEAEAE'}
+                secureTextEntry={true}
+              />
+            </View>
+            {/* Button  */}
+            <View style={styles.button}>
+              <Pressable style={styles.loginBtn} onPress={loginEvent}>
+                <Text style={styles.btnText}>Login</Text>
+              </Pressable>
+            </View>
+            <View
+              style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 70,
+              }}>
+              <Text>
+                Don't have an account ?{' '}
+                <Text style={{color: '#3777f0', fontStyle: 'italic'}}>
+                  Register now
+                </Text>
               </Text>
-            </Text>
+            </View>
           </View>
         </View>
-      </View>
-    </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

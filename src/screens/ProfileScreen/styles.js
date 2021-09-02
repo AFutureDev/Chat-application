@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 15,
     borderRadius: 20,
-    marginTop: 50,
+    marginTop: 80,
   },
   btnText: {
     textAlign: 'center',
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
   inputContainer: {
     flex: 1,
     margin: 10,
-    marginTop: 90,
+    marginTop: 80,
+    justifyContent: 'center',
   },
 });
 
