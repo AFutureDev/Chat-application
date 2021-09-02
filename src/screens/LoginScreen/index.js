@@ -23,9 +23,9 @@ const LoginScreen = () => {
 
   const loginEvent = () => {
     if (!email) {
-      console.warn('Please enter a name');
-    } else if (!password) {
       console.warn('Please enter a email');
+    } else if (!password) {
+      console.warn('Please enter a password');
     } else {
       setEmail(email);
       setPassword(password);
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     borderTopEndRadius: 30,
   },
   button: {
-    height: 100,
+    height: 120,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width / 2,
     justifyContent: 'center',
     padding: 15,
-    borderRadius: 20,
+    borderRadius: 25,
   },
   btnText: {
     textAlign: 'center',
